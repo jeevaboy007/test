@@ -1,0 +1,10 @@
+---
+- hosts: servers
+  #remote_user: root
+
+  tasks:
+          - name: allow port ssh
+            chain : INPUT
+            protocol: tcp
+            destination_port : 22
+            jump : ACCEPT
