@@ -1,0 +1,7 @@
+---
+- hosts: servers
+  remote_user: root
+  
+  tasks:
+          - name: Install "pip"
+            pip: name=nginx.pip state=present
